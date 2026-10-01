@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ethan Fu | Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    :root {
+      --rutgers-red: #CC0033;
+      --dark-red: #A5002A;
+      --white: #FFFFFF;
+      --light-gray: #F6F6F6;
+      --dark-text: #222222;
+    }
+
+    /* HEADER */
+
+    header {
+      background-color: var(--rutgers-red);
+      color: var(--white);
+      padding: 60px 20px;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: var(--white);
+    }
+
+    .headshot {
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 16px;
+      border: 5px solid var(--white);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background-color: var(--white);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid var(--rutgers-red);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--rutgers-red);
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 16px;
+    }
+
+    nav a:hover {
+      color: var(--dark-red);
+      text-decoration: underline;
+    }
+
+    /* MAIN CONTENT */
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--rutgers-red);
+      border-bottom: 3px solid var(--rutgers-red);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* PERSONAL STATEMENT */
+
+    .statement {
+      background-color: var(--light-gray);
+      padding: 30px;
+      border-left: 6px solid var(--rutgers-red);
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      font-size: 1.15rem;
+    }
+
+    /* SKILLS */
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background-color: var(--rutgers-red);
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      border: 2px solid var(--rutgers-red);
+    }
+
+    .skill:hover {
+      background-color: var(--white);
+      color: var(--rutgers-red);
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background-color: var(--white);
+      padding: 28px;
+      border-radius: 12px;
+      border-top: 6px solid var(--rutgers-red);
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.09);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.13);
+    }
+
+    .project-card h3 {
+      color: var(--rutgers-red);
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+    }
+
+    .project-card p {
+      color: #444444;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background-color: var(--rutgers-red);
+      color: var(--white);
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.3rem;
+      }
+
+      .headshot {
+        width: 210px;
+        height: 260px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 9px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="hero">
+
+      <div class="hero-text">
+
+        <h1>Ethan Fu</h1>
+
+        <p>
+          Accounting student and aspiring business professional focused on
+          using analytical, problem-solving, and communication skills to
+          create meaningful results.
+        </p>
+
+      </div>
+
+      <img
+        src="EthanFuHeadshot.JPG"
+        alt="Professional headshot of Ethan Fu"
+        class="headshot"
+      >
+
+    </div>
+  </header>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="#statement">Personal Statement</a>
+
+    <a href="#skills">Skills</a>
+
+    <a href="#projects">Projects</a>
+
+  </nav>
+
+
+  <main>
+
+    <!-- PERSONAL STATEMENT -->
+
+    <section id="statement">
+
+      <h2>Personal Statement</h2>
+
+      <div class="statement">
+        I am an accounting student and motivated business professional
+        with strong analytical, organizational, and communication skills
+        who enjoys solving problems and working collaboratively to
+        achieve results.
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+      <h2>Skills</h2>
+
+      <div class="skills-list">
+
+        <span class="skill">Microsoft Excel</span>
+
+        <span class="skill">Financial Analysis</span>
+
+        <span class="skill">Accounting</span>
+
+        <span class="skill">Data Analysis</span>
+
+        <span class="skill">Microsoft Office</span>
+
+        <span class="skill">Problem Solving</span>
+
+        <span class="skill">Teamwork</span>
+
+        <span class="skill">Communication</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+
+          <h3>Rental Market Regression Analysis</h3>
+
+          <p>
+            Analyzed apartment rental data using Microsoft Excel to examine
+            the relationship between apartment size and monthly rent.
+            Applied linear regression, confidence intervals, prediction
+            intervals, and statistical analysis to interpret the results.
+          </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <h3>Customer Profitability Analysis</h3>
+
+          <p>
+            Evaluated customer profitability using activity-based costing
+            to determine how ordering, delivery, and service activities
+            affected operating income. Compared revenues, gross margins,
+            and activity costs to identify differences in customer
+            profitability.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>&copy; 2026 Ethan Fu. All rights reserved.</p>
+
+  </footer>
+
+
+</body>
+</html>
