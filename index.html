@@ -7,6 +7,7 @@
   <title>Ethan Fu | Portfolio</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,19 +18,19 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #222222;
-      line-height: 1.6;
-    }
-
     :root {
       --rutgers-red: #CC0033;
       --dark-red: #A5002A;
       --white: #FFFFFF;
       --light-gray: #F6F6F6;
       --dark-text: #222222;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: var(--white);
+      color: var(--dark-text);
+      line-height: 1.6;
     }
 
     /* HEADER */
@@ -41,12 +42,12 @@
     }
 
     .hero {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
+      gap: 55px;
     }
 
     .hero-text {
@@ -54,18 +55,26 @@
     }
 
     .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
+      font-size: 3.2rem;
+      margin-bottom: 5px;
     }
 
-    .hero-text p {
+    .school {
+      font-size: 1.35rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero-description {
       font-size: 1.2rem;
       color: var(--white);
     }
 
+    /* HEADSHOT */
+
     .headshot {
-      width: 250px;
-      height: 300px;
+      width: 320px;
+      height: 390px;
       object-fit: cover;
       object-position: center top;
       border-radius: 16px;
@@ -196,18 +205,23 @@
     /* MOBILE */
 
     @media (max-width: 700px) {
+
       .hero {
         flex-direction: column-reverse;
         text-align: center;
       }
 
       .hero-text h1 {
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+      }
+
+      .school {
+        font-size: 1.15rem;
       }
 
       .headshot {
-        width: 210px;
-        height: 260px;
+        width: 270px;
+        height: 330px;
       }
 
       .projects-grid {
@@ -219,6 +233,7 @@
         margin: 5px 9px;
       }
     }
+
   </style>
 </head>
 
@@ -227,13 +242,18 @@
   <!-- HEADER -->
 
   <header>
+
     <div class="hero">
 
       <div class="hero-text">
 
         <h1>Ethan Fu</h1>
 
-        <p>
+        <p class="school">
+          Rutgers Business School | Accounting
+        </p>
+
+        <p class="hero-description">
           Accounting student and aspiring business professional focused on
           using analytical, problem-solving, and communication skills to
           create meaningful results.
@@ -248,6 +268,7 @@
       >
 
     </div>
+
   </header>
 
 
@@ -266,6 +287,7 @@
 
   <main>
 
+
     <!-- PERSONAL STATEMENT -->
 
     <section id="statement">
@@ -273,10 +295,13 @@
       <h2>Personal Statement</h2>
 
       <div class="statement">
-        I am an accounting student and motivated business professional
-        with strong analytical, organizational, and communication skills
-        who enjoys solving problems and working collaboratively to
-        achieve results.
+
+        I am an Accounting student at Rutgers Business School and a
+        motivated aspiring business professional with strong analytical,
+        organizational, and communication skills. I enjoy solving problems,
+        analyzing information, and working collaboratively to achieve
+        meaningful results.
+
       </div>
 
     </section>
@@ -319,6 +344,7 @@
 
       <div class="projects-grid">
 
+
         <div class="project-card">
 
           <h3>Rental Market Regression Analysis</h3>
@@ -347,9 +373,11 @@
 
         </div>
 
+
       </div>
 
     </section>
+
 
   </main>
 
